@@ -1,0 +1,298 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+html{
+    font-size: 10px;
+    overflow-x: hidden;
+}
+body{
+    font-size: 1.6rem;
+    background-color: rgb(77, 77, 77);
+    color: #eee;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Scroll part start*/
+
+.scroll{
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.nav-links li a.scroll2{
+    color: #fff;
+}
+
+.menu-box div.scroll2{
+    background-color: #fff;
+}
+
+/* Scroll part finish */
+header{
+    background-image: url('../images/3.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+}
+nav{
+    padding: 2rem;
+    position: fixed;
+    width: 100vw;
+    transition: .5s ease;
+    z-index: 33;
+}
+nav, .nav-links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo-box{
+    width: 15rem;
+}
+.logo-box img{
+    width: 100%;
+}
+.nav-links li{
+    margin: 0 1rem;
+}
+.nav-links li a{
+    color: #eee;
+    font-size: 2.1rem;
+}
+.nav-links li a:hover{
+    color: greenyellow;
+}
+.menu-box{
+    width: 2rem;
+    cursor: pointer;
+    display: none;
+}
+.menu-box div{
+    background-color: #222;
+    height: 3px;
+    margin-bottom: .5rem;
+    transition: .4s ease;
+}
+.menu-box div:nth-child(2n){
+    width: 100%;
+}
+.menu-box div:nth-child(2n+1){
+    width: 50%;
+}
+.menu-box:hover div:nth-child(2n){
+    width: 50%;
+}
+.menu-box:hover div:nth-child(2n+1){
+    width: 100%;
+}
+.head-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.head-text h2{
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.head-text p{
+    opacity: .8;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+/*.head-text a{
+    border: 1px solid yellow;
+    padding: 1rem 4rem;
+    color: yellow;
+    transition: .4s ease;
+}
+.head-text a:hover{
+    background-color: yellow;
+    border-color: #222;
+    color: #222;
+}*/
+
+/*About Section*/
+
+.about{
+    margin-top: 5rem;
+    display: flex;
+    height: 70vh;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.about-text{
+    max-width: 50%;
+}
+.inner-text{
+    padding-top: 20%;
+    padding-left: 5%;
+    width: 90%;
+    color: #eee;
+}
+.about-images{
+    width: 45%;
+}
+.intro{
+    font-size: 4.5rem;
+}
+.intro span{
+    color: greenyellow;
+    letter-spacing: 1.5px;
+}
+.text{
+    margin: 2rem 0 4rem 0;
+    opacity: .8;
+}
+.inner-text a{
+    border: 1px solid #eee;
+    padding: 1.5rem 3rem;
+    color: #eee;
+    transition: .5s ease;
+}
+.inner-text a:hover{
+    color: #333;
+    background-color: #eee;
+    border-color: #333;
+}
+
+
+/*Products Part*/
+
+.products{
+    margin-top: 4rem;
+}
+.main-name{
+    text-align: center;
+    font-size: 6rem;
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    color: #eee;
+}
+.main-name::after, .main-name::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    height: 3px;
+    background-color: #eee;
+    z-index: -1;
+}
+.main-name::after{
+    right: -50%;
+}
+.main-name::before{
+    left: -50%;
+}
+.breakfast, .lunch, .dinner{
+    position: relative;
+    padding: 0 10%;
+}
+
+.name-one{
+    position: absolute;
+    transform: rotate(-90deg);
+    font-size: 7rem;
+    top: 30%;
+    color: #eee;
+    opacity: .6;
+}
+#breakfast{
+    left: -6%;
+}
+#lunch{
+    left: -3%;
+}
+#dinner{
+    left: -4%;
+}
+
+.morning-foods, .noon-foods, .evening-foods{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 4rem 0;
+}
+.food{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s ease;
+}
+.info{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    text-align: center;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, .6);
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info .name{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.info .price{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    opacity: .6;
+}
+.food img{
+    transition: .5s ease;
+}
+.food:hover img{
+    transform: scale(1.2);
+}
+.food:hover .info{
+    top: 0;
+}
+
+/*Servicees Part*/
+.services{
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    padding: 0 10%;
+}
+#service{
+    text-align: center;
+}
+#service:nth-child(2){
+    margin: 0 3rem;
+}
+#service h4{
+    color: greenyellow;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+#service i{
+    background-color: greenyellow;
+    color: #333;
+    font-size: 3rem;
+    border-radius: 50%;
+    padding: 2rem;
+}
+#service p{
+    font-size: 1.4rem;
+}
